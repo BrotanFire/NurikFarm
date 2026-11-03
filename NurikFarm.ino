@@ -788,6 +788,7 @@ void processCommand(String cmd, const String& peerId) {
         sensors[currentFlower].threshold = sensors[currentFlower].threshold + THRESHOLD_STEP_BIG;
         saveState();
       }
+    }
       if (cmd == "+100") {
         if (sensors[currentFlower].threshold + THRESHOLD_STEP_BIG > 0) {
           sensors[currentFlower].threshold = sensors[currentFlower].threshold + THRESHOLD_STEP_BIG;
@@ -796,7 +797,6 @@ void processCommand(String cmd, const String& peerId) {
       }
       sendFlowerMenu(peerId, currentFlower);
       return;
-    }
     }
     if (currentScreen == "settings") {
       if (cmd == "Назад") {
