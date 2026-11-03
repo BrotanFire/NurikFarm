@@ -16,15 +16,15 @@ const String VK_TOKEN = VK_TOKEN_SEC;
 const String GROUP_ID = GROUP_ID_SEC;
 const String API_VERSION = "5.199";
 
-// Пины
-const int RELAY_PINS[6] = { 19, 18, 5, 17, 16, 4 };
-const int SENSOR_PINS[6] = { 36, 39, 34, 35, 32, 33 };
+// Пины реле привязывается к датчику по логике: Номер в массиве пинов реле при номер в массиве пинов датчиков.
+const int RELAY_PINS[6] = { 19, 18, 5, 17, 16, 4 }; // Пины реле
+const int SENSOR_PINS[6] = { 36, 39, 34, 35, 32, 33 };  // Пины датчиков
 
 // Тайминги полива
-const uint32_t WATER_PULSE_MS = 4000;
-const uint32_t SETTLE_MS = 120000;
-const int MAX_WATER_CYCLES = 6;
-const uint32_t SENSOR_SAMPLES = 7;
+const uint32_t WATER_PULSE_MS = 4000; // время работы насоса в цикле
+const uint32_t SETTLE_MS = 120000; // время ожидания для сбора показаний после полива
+const int MAX_WATER_CYCLES = 6; // кол-во проходов цикла полива
+const uint32_t SENSOR_SAMPLES = 7; // кол-во опросов датчиков для получения значения
 
 // Шаги настройки
 const int THRESHOLD_STEP_SMALL = 10;
