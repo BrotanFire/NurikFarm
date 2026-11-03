@@ -785,12 +785,12 @@ void processCommand(String cmd, const String& peerId) {
     }
     if (cmd == "+10") {
       if (sensors[currentFlower].threshold + THRESHOLD_STEP_SMALL > 0) {
-        sensors[currentFlower].threshold = sensors[currentFlower].threshold - THRESHOLD_STEP_BIG;
+        sensors[currentFlower].threshold = sensors[currentFlower].threshold + THRESHOLD_STEP_BIG;
         saveState();
       }
       if (cmd == "+100") {
         if (sensors[currentFlower].threshold + THRESHOLD_STEP_BIG > 0) {
-          sensors[currentFlower].threshold = sensors[currentFlower].threshold - THRESHOLD_STEP_BIG;
+          sensors[currentFlower].threshold = sensors[currentFlower].threshold + THRESHOLD_STEP_BIG;
           saveState();
         }
       }
