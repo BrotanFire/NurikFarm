@@ -767,7 +767,7 @@ void processCommand(String cmd, const String& peerId) {
       sendNotification("Датчик#" + String(currentFlower + 1) + " включен");
     }
     if (cmd == "Выключить датчик") {
-      sensors[currentFlower].disabled = false;
+      sensors[currentFlower].disabled = true;
       saveState();
       sendNotification("Датчик#" + String(currentFlower + 1) + " выключен");
     }
